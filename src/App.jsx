@@ -1,22 +1,22 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Fee from "./components/Fee";
-import EventDetails from "./components/EventDetails";
-import InfoBanner from "./components/InfoBanner";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Registration from "./pages/Registration";
 
 function App() {
   return (
-    <>
-      <Navbar />
+    <BrowserRouter>
+      <Routes>
+        {/* Home Page */}
+        <Route path="/" element={<Home />} />
 
-      <Hero />
-
-      <Fee />
-
-      <EventDetails />
-
-      <InfoBanner />
-    </>
+        {/* Registration Page */}
+        <Route
+          path="/registration"
+          element={<Registration />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

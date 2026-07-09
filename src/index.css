@@ -283,6 +283,7 @@ input {
     justify-content:center;
     align-items:stretch;
     gap:30px;
+    flex-wrap: wrap;      
 }
 
 .register-card{
@@ -301,13 +302,14 @@ input {
 
     transition:.35s;
     box-shadow:0 18px 40px rgba(255,193,7,.35);
+    min-width: 320px; 
 }
 
 .register-card:hover{
     transform:translateY(-8px);
     box-shadow:0 25px 50px rgba(255,193,7,.5);
 }
-/.register-icon{
+.register-icon{
     font-size:3rem;
     margin-bottom:12px;
 }
@@ -686,4 +688,478 @@ grid-template-columns:1fr;
     .important-item h2 {
         font-size: 1.5rem;
     }
+}
+/* ===========================
+   REGISTRATION PAGE
+=========================== */
+
+.registration-page {
+  background: #020617;
+  min-height: 100vh;
+  padding: 120px 5% 80px;
+}
+
+.registration-hero {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(251, 191, 36, .12);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, .4);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.registration-hero h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.registration-hero p {
+  color: #94a3b8;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.registration-card {
+  max-width: 1100px;
+  margin: 0 auto 35px;
+  background: #0f172a;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  padding: 35px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.35);
+}
+
+.registration-card h2 {
+  color: #fff;
+  margin-bottom: 28px;
+  font-size: 1.7rem;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #cbd5e1;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  height: 54px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: white;
+  padding: 0 18px;
+  font-size: 15px;
+  outline: none;
+  transition: .3s;
+}
+
+.form-group input::placeholder {
+  color: #64748b;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px rgba(251,191,36,.15);
+}
+
+/* ===========================
+   RSFI
+=========================== */
+
+.upload-box {
+  border: 2px dashed #475569;
+  border-radius: 18px;
+  padding: 35px;
+  text-align: center;
+  transition: .3s;
+}
+
+.upload-box:hover {
+  border-color: #fbbf24;
+}
+
+.upload-box input {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.auto-info {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.auto-info p {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* ===========================
+   PAYMENT
+=========================== */
+
+.payment-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  margin: 18px 0;
+}
+
+.payment-row.total {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.registration-card hr {
+  border: none;
+  border-top: 1px solid #334155;
+  margin: 20px 0;
+}
+
+.agree-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e1;
+  margin: 30px 0;
+}
+
+.payment-btn {
+  width: 100%;
+  height: 58px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: #071429;
+  background: linear-gradient(135deg,#FFD54F,#FF9800);
+  transition: .3s;
+}
+
+.payment-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255,193,7,.35);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+  .registration-page{
+    padding:100px 20px 50px;
+  }
+
+  .registration-hero h1{
+    font-size:2.2rem;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .registration-card{
+    padding:22px;
+  }
+
+  .auto-info{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .payment-row.total{
+    font-size:20px;
+  }
+}
+.registration-header{
+    background:#0F172A;
+    padding:20px 5%;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    border-bottom:2px solid rgba(251,191,36,.3);
+}
+
+.header-logo img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+}
+
+.header-content{
+    flex:1;
+    text-align:center;
+}
+
+.header-content h2{
+    color:#FBBF24;
+    font-size:2rem;
+    margin-bottom:6px;
+    font-weight:800;
+}
+
+.header-content h3{
+    color:#fff;
+    font-size:1.2rem;
+    margin-bottom:6px;
+}
+
+.header-content p{
+    color:#94A3B8;
+    font-size:15px;
+}
+
+@media (max-width:768px){
+
+    .registration-header{
+        flex-direction:column;
+        text-align:center;
+        padding:18px;
+    }
+
+    .header-logo img{
+        width:65px;
+        height:65px;
+    }
+
+    .header-content h2{
+        font-size:1.4rem;
+    }
+
+    .header-content h3{
+        font-size:1rem;
+    }
+}
+/* ===========================
+   REGISTRATION HEADER
+=========================== */
+
+.registration-header{
+    width:100%;
+    background:#0F172A;
+    border-bottom:3px solid #FBBF24;
+    padding:18px 5%;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.header-logo img{
+    width:85px;
+    height:85px;
+    object-fit:contain;
+}
+
+.header-content{
+    flex:1;
+    text-align:center;
+}
+
+.header-content h1{
+    margin:0;
+    color:#FBBF24;
+    font-size:2.2rem;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.header-content h2{
+    margin:8px 0 6px;
+    color:#ffffff;
+    font-size:1.35rem;
+    font-weight:700;
+}
+
+.header-content p{
+    margin:0;
+    color:#CBD5E1;
+    font-size:1rem;
+    letter-spacing:1px;
+    font-weight:500;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .registration-header{
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+        padding:18px;
+    }
+
+    .header-logo img{
+        width:65px;
+        height:65px;
+    }
+
+    .header-content h1{
+        font-size:1.35rem;
+        letter-spacing:1px;
+    }
+
+    .header-content h2{
+        font-size:1rem;
+    }
+
+    .header-content p{
+        font-size:.9rem;
+    }
+
+}
+/* ===========================
+   RSFI Upload
+=========================== */
+
+.upload-box{
+    border:2px dashed #475569;
+    border-radius:20px;
+    padding:45px 30px;
+    text-align:center;
+    transition:.35s;
+    background:#111827;
+}
+
+.upload-box:hover{
+    border-color:#FBBF24;
+    background:#162033;
+}
+
+.upload-icon{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.upload-box h3{
+    color:#fff;
+    font-size:1.5rem;
+    margin-bottom:10px;
+}
+
+.upload-box p{
+    color:#94A3B8;
+    margin-bottom:25px;
+}
+
+.upload-btn{
+    display:inline-block;
+    background:linear-gradient(135deg,#FFD54F,#FF9800);
+    color:#071429;
+    padding:14px 34px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.3s;
+}
+
+.upload-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(255,193,7,.35);
+}
+
+.upload-box small{
+    display:block;
+    color:#64748B;
+    margin-top:18px;
+}
+
+.auto-info{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.info-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#111827;
+    border:1px solid #334155;
+    border-radius:16px;
+    padding:18px;
+}
+
+.info-card span{
+    font-size:2rem;
+}
+
+.info-card strong{
+    color:#fff;
+    display:block;
+    margin-bottom:4px;
+}
+
+.info-card p{
+    color:#22C55E;
+    margin:0;
+}
+
+@media(max-width:768px){
+
+    .auto-info{
+        grid-template-columns:1fr;
+    }
+
+    .upload-box{
+        padding:30px 20px;
+    }
+
+    .upload-icon{
+        font-size:3rem;
+    }
+
+}
+.input-error {
+  border: 1px solid #ef4444 !important;
+}
+
+.error-text {
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
 }
